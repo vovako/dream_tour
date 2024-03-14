@@ -1,0 +1,63 @@
+.wait {
+	@include adaptiv-value("padding-top", 80, 40);
+	@include adaptiv-value("padding-bottom", 80, 41);
+	background-color: rgba(241, 241, 241, 1);
+
+	&__container {
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 48, 32);
+	}
+
+	&__grid {
+		display: grid;
+		gap: 32px;
+		grid-template-columns: repeat(4, 1fr);
+		@media (max-width: $md2+px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $md4+px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__item {
+	}
+}
+.wait-item {
+	box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+
+	&__image {
+		@include adaptiv-value('height', 161, 181);
+		img{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__body {
+		padding: 32px 24px;
+		background-color: white;
+		flex-grow: 1;
+	}
+
+	&__title {
+		font-family: "Motserrat";
+		line-height: calc(24 / 18);
+		@include adaptiv-value("font-size", 18, 14);
+		font-weight: 700;
+		margin-bottom: 9px;
+		color: $black;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: calc(24 / 14);
+		color: $darkGray;
+	}
+}

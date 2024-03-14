@@ -1,0 +1,64 @@
+.team {
+	@include adaptiv-value("padding-top", 120, 48);
+	@include adaptiv-value("padding-bottom", 133, 48);
+
+	&__container {
+	}
+
+	&__title {
+		width: 80%;
+		@include adaptiv-value("font-size", 60, 32);
+		@include adaptiv-value("margin-bottom", 59, 24);
+		@media (max-width: $md3+px) {
+			width: 100%;
+		}
+	}
+
+	&__text {
+		width: 44%;
+		@include adaptiv-value("margin-bottom", 79, 50);
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
+
+	&__slider {
+	}
+}
+
+.team-slider {
+	@include adaptiv-value("height", 610, 501);
+
+	.swiper-slide {
+		width: auto;
+	}
+	@media (min-width: $md4+px) {
+		.slider__prev-btn {
+			right: 16px;
+			left: auto;
+			transform: translate(-100%) rotate(180deg);
+		}
+		.slider__next-btn {
+			right: 0px;
+			left: auto;
+			transform: translate(0);
+		}
+	}
+
+	&__image {
+		@include adaptiv-value("height", 460, 383);
+		margin-bottom: 24px;
+		img {
+			height: 100%;
+		}
+	}
+
+	&__text {
+		font-weight: 600;
+		font-size: 18px;
+		a {
+			font-weight: 400;
+			color: $secondary;
+		}
+	}
+}

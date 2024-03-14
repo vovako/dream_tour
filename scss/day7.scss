@@ -1,0 +1,102 @@
+.day7 {
+	position: relative;
+	padding-bottom: 0;
+	margin-bottom: -50px;
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__body {
+		flex: 0 0 55%;
+		@include adaptiv-value("margin-bottom", 57, 0);
+		@media (max-width: $md1+px) {
+			flex-basis: 80%;
+		}
+		@media (max-width: $md3+px) {
+			flex-basis: 100%;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 48, 24);
+	}
+
+	&__subtext {
+		width: 80%;
+		@media (max-width: $md3+px) {
+			width: 60%;
+		}
+		@media (max-width: $md4+px) {
+			width: 100%;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		align-self: center;
+		z-index: -1;
+		@include adaptiv-value('top', 0, 250);
+		@include adaptiv-value("height", 700, 300);
+		@media (max-width: $md1+px) {
+			@include adaptiv-value('top', 0, 350);
+			@include adaptiv-value("height", 700, 50);
+		}
+		@media (max-width: $md2+px) {
+			@include adaptiv-value('top', 0, 350);
+			@include adaptiv-value("height", 700, 400);
+			@include adaptiv-value("right", 0, -400);
+		}
+		@media (max-width: $md3+px) {
+			@include adaptiv-value('top', 0, 150);
+		}
+		@media (max-width: $md4+px) {
+			position: relative;
+			top: 0;
+			height: auto;
+			width: 100%;
+			right: calc(50% - 50vw);
+		}
+		
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__text-block {
+		flex: 0 0 43%;
+		padding-left: 32px;
+		@media (max-width: $md2+px) {
+			padding-left: 0;
+			flex-basis: 100%;
+			margin-bottom: 48px;
+		}
+	}
+
+	&__text {
+		
+	}
+
+	&__addit {
+		.day6-addit__title {
+			color: black;
+		}
+		.day6-addit__name {
+			color: black;
+		}
+		.day6-addit__descr {
+			color: #313131;
+		}
+	}
+	&__slider {
+		flex: 0 0 57%;
+		@media (max-width: $md2+px) {
+			position: relative;
+			flex-basis: auto;
+			width: calc(50% + 50vw);
+		}
+	}
+}

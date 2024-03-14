@@ -1,0 +1,19 @@
+.day4 {
+	@include adaptiv-value('padding-top', 102, 90);
+	@include adaptiv-value('padding-bottom', 185, 50);
+	background-color: black;
+	position: relative;
+
+	&__birds {
+		position: absolute;
+		bottom: -90px;
+		@include adaptiv-value('right', 102, 0);
+		width: 373px;
+		@include adaptiv-value('height', 315, 270);
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}

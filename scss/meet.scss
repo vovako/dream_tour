@@ -1,0 +1,37 @@
+.meet {
+	@include adaptiv-value('padding-top', 65, 51);
+	@include adaptiv-value('padding-bottom', 195, 112);
+	background: url(../img/meet/bg.jpg) top / cover no-repeat;
+	&__container {
+		display: flex;
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+		}
+	}
+
+	&__body {
+		flex: 0 0 470px;
+		@media (max-width: $md2+px) {
+			flex-basis: 100%;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 48, 24);
+	}
+
+	&__text {
+		span{
+			color: white;
+		}
+	}
+
+	&__slider {
+		right: 0;
+		align-self: center;
+		@media (max-width: $md2+px) {
+			
+		}
+	}
+}
