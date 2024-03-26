@@ -30,6 +30,10 @@
 
 	&__menu-item {
 		color: $primary;
+		&:hover {
+			cursor: pointer;
+			color: rgba(black, 0.6);;
+		}
 		&:not(:last-child) {
 			margin-right: 56px;
 		}
